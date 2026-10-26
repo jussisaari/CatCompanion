@@ -1,0 +1,3 @@
+[MASTER]
+extension-pkg-whitelist=PySide6
+extension-pkg-whitelist=random
