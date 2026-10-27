@@ -36,9 +36,13 @@ Keep the `textures` and `sounds` directories in the project root when running
 from source, the application loads its images and audio from these directories.
 Close the CatCompanion window to exit.
 
-## Build a standalone .exe
+## The standalone .exe
 
-CatCompanion can be packaged into a standalone Windows application using
+The standalone .exe file to run the application can be found in: `dist\CatCompanion\CatCompanion.exe`
+
+## Building a standalone .exe (Optional)
+
+If you want to build your own new standalone .exe file (for example if you've made your own modifications to the code). You can do this by using
 [PyInstaller](https://pyinstaller.org/) and the included `CatCompanion.spec`
 file, which bundles the `textures` and `sounds` directories, sets the app
 icon, and runs the app windowed (no console).
@@ -58,8 +62,7 @@ uv run pyinstaller --clean --noconfirm CatCompanion.spec
 
 This produces a `dist\CatCompanion\` folder containing `CatCompanion.exe`
 and an `_internal\` folder with its dependencies (Python runtime, Qt/PySide6
-binaries, etc.). Run `CatCompanion.exe` from inside that folder, and
-distribute/copy the whole `dist\CatCompanion\` folder together — the
+binaries, etc.). Run `CatCompanion.exe` from inside that folder, and copy the whole `dist\CatCompanion\` folder together. The
 `.exe` will not run without its `_internal\` folder alongside it.
 
 PyInstaller also creates a `build\` folder as a scratch workspace while
