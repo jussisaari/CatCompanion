@@ -38,7 +38,7 @@ Close the CatCompanion window to exit.
 
 ## The standalone .exe
 
-The standalone .exe file to run the application can be found in: `dist\CatCompanion\CatCompanion.exe`
+The standalone .exe file to run the application can be found in: `dist\CatCompanion.exe`
 
 ## Building a standalone .exe (Optional)
 
@@ -60,14 +60,9 @@ Build the executable:
 uv run pyinstaller --clean --noconfirm CatCompanion.spec
 ```
 
-This produces a `dist\CatCompanion\` folder containing `CatCompanion.exe`
-and an `_internal\` folder with its dependencies (Python runtime, Qt/PySide6
-binaries, etc.). Run `CatCompanion.exe` from inside that folder, and copy the whole `dist\CatCompanion\` folder together. The
-`.exe` will not run without its `_internal\` folder alongside it.
+This produces a single file, `dist\CatCompanion.exe`, with everything
+(Python runtime, Qt/PySide6 binaries, `textures`, `sounds`, etc.) bundled
+inside it. Just run `dist\CatCompanion.exe` directly.
 
-PyInstaller also creates a `build\` folder as a scratch workspace while
-compiling, it's safe to delete and is not needed to run the app. The
-`CatCompanion.exe` inside `build\CatCompanion\` is not runnable on its
-own (it's an intermediate artifact). Always run the one inside `dist\`.
 
 
